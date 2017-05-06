@@ -1,46 +1,45 @@
 /*
- *  Copyright 2012, 2012 Fabrice DUNAN
  *
- * This file is part of loupArdent.jar.
+ * This file is part of ldvelh-combats.
 
-    loupArdent.jar is free software: you can redistribute it and/or modify
+    ldvelh-combats is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    Foobar is distributed in the hope that it will be useful,
+    ldvelh-combats is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with Foobar.  If not, see <http://www.gnu.org/licenses/>
+    along with ldvelh-combats.  If not, see <http://www.gnu.org/licenses/>
  *
  */
 package fr.dunan.jx.commun;
 
+import java.beans.XMLDecoder;
+import java.beans.XMLEncoder;
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FilenameFilter;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-
 
 public class Stockage
     {
     private static final String CHEMIN_DES_PERSONNAGES = "src/main/ressources";
 
-	public static void listePersonnage()
+    public static void listePersonnage()
         {
         FilenameFilter serFilter = new FilenameFilter()
             {
-                public boolean accept( File arg0, String arg1 )
-                    {
-                    return arg1.endsWith( ".ser" );
-                    }
+            public boolean accept( File arg0, String arg1 )
+                {
+                return arg1.endsWith( ".ser" );
+                }
             };
         File repertoire = new File( CHEMIN_DES_PERSONNAGES );
         String[] children = repertoire.list( serFilter );
@@ -54,18 +53,35 @@ public class Stockage
 
     public static void serialise( APersonnage p )
         {
+        FileOutputStream fichier = null;
         try
             {
-            FileOutputStream fichier = new FileOutputStream( p.getNom()
-                            + ".ser" );
-            ObjectOutputStream oos = new ObjectOutputStream( fichier );
-            oos.writeObject( p );
-            oos.flush();
-            oos.close();
+            fichier = new FileOutputStream( CHEMIN_DES_PERSONNAGES + "/"
+                            + p.getNom() + ".xml" );
             }
         catch( java.io.IOException e )
             {
+            System.err.println( "Erreur lors de la création du fichier de sortie" );
             e.printStackTrace();
+            }
+        XMLEncoder xmlEnc = null;
+        try
+            {
+            xmlEnc = new XMLEncoder( new BufferedOutputStream( fichier ) );
+            xmlEnc.writeObject( p );
+            xmlEnc.flush();
+            }
+        catch( Exception e )
+            {
+            System.err.println( "Erreur lors de la serialisation de l'objet de sortie" );
+            e.printStackTrace();
+            }
+        finally
+            {
+            if( xmlEnc != null )
+                {
+                xmlEnc.close();
+                }
             }
         }
 
@@ -74,32 +90,25 @@ public class Stockage
         {
         APersonnage p = null;
         FileInputStream fichier;
-        ObjectInputStream ois = null;
-        fichier = new FileInputStream( nomPersonnage + ".ser" );
+        XMLDecoder decoder = null;
+        fichier = new FileInputStream( CHEMIN_DES_PERSONNAGES + "/"
+                        + nomPersonnage + ".xml" );
         try
             {
-            ois = new ObjectInputStream( fichier );
-            p = (APersonnage) ois.readObject();
+            decoder = new XMLDecoder( new BufferedInputStream( fichier ) );
+            p = (APersonnage) decoder.readObject();
             }
-        catch( ClassNotFoundException e )
-            {
-            e.printStackTrace();
-            }
-        catch( IOException e )
+        catch( final Exception e )
             {
             e.printStackTrace();
             }
         finally
-        {
-        	try {
-				fichier.close();
-				ois.close();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				System.err.println("pb au close fichier");
-				e.printStackTrace();
-			}
-        }
+            {
+            if( decoder != null )
+                {
+                decoder.close();
+                }
+            }
         return( p);
         }
     }
