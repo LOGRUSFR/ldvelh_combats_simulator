@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_131" class="java.beans.XMLDecoder">
+ <object class="fr.dunan.jx.ldvelh.loupArdent.Personnage">
+  <void property="_baseInit">
+   <int>136</int>
+  </void>
+  <void property="_bonusDegats">
+   <int>5</int>
+  </void>
+  <void property="_chance">
+   <int>48</int>
+  </void>
+  <void property="_courage">
+   <int>64</int>
+  </void>
+  <void property="_endurance">
+   <int>64</int>
+  </void>
+  <void property="_force">
+   <int>40</int>
+  </void>
+  <void property="_limiteAssaut">
+   <int>6</int>
+  </void>
+  <void property="_magnetisme">
+   <int>32</int>
+  </void>
+  <void property="_nom">
+   <string>la2</string>
+  </void>
+  <void property="_pdv_courant">
+   <int>-33</int>
+  </void>
+  <void property="_pdv_initial">
+   <int>312</int>
+  </void>
+  <void property="_rapidite">
+   <int>24</int>
+  </void>
+  <void property="_seduction">
+   <int>40</int>
+  </void>
+ </object>
+</java>
