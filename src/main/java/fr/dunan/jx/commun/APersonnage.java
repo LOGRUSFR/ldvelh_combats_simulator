@@ -4,8 +4,6 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 
-import fr.dunan.jx.ldvelh.loupArdent.Personnage;
-
 public abstract class APersonnage implements java.io.Serializable,IPersonnage {
 	 /**
     *
@@ -40,7 +38,7 @@ public abstract class APersonnage implements java.io.Serializable,IPersonnage {
 	public void exportXml()
     {
 	try {
-	      JAXBContext context = JAXBContext.newInstance(Personnage.class);
+	      JAXBContext context = JAXBContext.newInstance(APersonnage.class);
 	      Marshaller m = context.createMarshaller();
 	      m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 	      m.marshal(this, System.out);

@@ -34,19 +34,19 @@ public class Stockage
 
     public static void listePersonnage()
         {
-        FilenameFilter serFilter = new FilenameFilter()
+        FilenameFilter filtreExtensionFichier = new FilenameFilter()
             {
             public boolean accept( File arg0, String arg1 )
                 {
-                return arg1.endsWith( ".ser" );
+                return arg1.endsWith( ".xml" );
                 }
             };
         File repertoire = new File( CHEMIN_DES_PERSONNAGES );
-        String[] children = repertoire.list( serFilter );
+        String[] children = repertoire.list( filtreExtensionFichier );
         for( int i = 0; i < children.length; i++ )
             {
             System.out.println( children[i].substring( 0,
-                                                       children[i].lastIndexOf( ".ser" ) ) );
+                                                       children[i].lastIndexOf( ".xml" ) ) );
             }
 
         }
@@ -84,6 +84,8 @@ public class Stockage
                 }
             }
         }
+    
+    
 
     public static APersonnage deserialise( String nomPersonnage )
                     throws FileNotFoundException
