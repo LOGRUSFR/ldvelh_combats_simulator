@@ -31,7 +31,9 @@ import java.io.ObjectOutputStream;
 
 public class Stockage
     {
-    public static void listePersonnage()
+    private static final String CHEMIN_DES_PERSONNAGES = "src/main/ressources";
+
+	public static void listePersonnage()
         {
         FilenameFilter serFilter = new FilenameFilter()
             {
@@ -40,7 +42,7 @@ public class Stockage
                     return arg1.endsWith( ".ser" );
                     }
             };
-        File repertoire = new File( "." );
+        File repertoire = new File( CHEMIN_DES_PERSONNAGES );
         String[] children = repertoire.list( serFilter );
         for( int i = 0; i < children.length; i++ )
             {
