@@ -260,8 +260,8 @@ public class LoupArdentIU extends AInterfaceUtilisateur
             {
             System.out.println("loupArdent version <" + _version + ">");
             System.out.println("Choix :");
-            System.out.println("1.Cree un personnage");
-            System.out.println("2.Ajoute un personnage");
+            System.out.println("1.Cree aléatoirement un personnage");
+            System.out.println("2.Crée manuellement un personnage");
             System.out.println("3.Liste les personnages disponibles");
             System.out.println("4.Affiche le détail d'un personnage");
             System.out.println("5.Equipe un personnage existant");
