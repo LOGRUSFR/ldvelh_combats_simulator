@@ -2,6 +2,8 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>fr.dunan.jx.ldvelh</groupId>
   <artifactId>ldvelh-combats</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0.0</version>
   <name>ldvelh-combats</name>
+  <description>Simulate gamebook character generation and combats.</description>
+  <url>https://github.com/logrusFr/ldvelh-combats</url>
 </project>
