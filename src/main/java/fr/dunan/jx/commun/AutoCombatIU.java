@@ -21,16 +21,12 @@ package fr.dunan.jx.commun;
 
 import java.util.Scanner;
 
+import com.sun.tools.javac.Main;
 import fr.dunan.jx.ldvelh.defis_fantastiques.DefiFantastiquesUI;
 import fr.dunan.jx.ldvelh.loup_ardent.LoupArdentIU;
 
 public class AutoCombatIU
     {
-    // *****************************************************************************
-
-        private static final String VERSION = "v1.0";
-
-    // *****************************************************************************
     /**
      * RELEASE NOTES
      * 
@@ -51,7 +47,8 @@ public class AutoCombatIU
          */
         public static void main(String[] args) {
             while (true) {
-                System.out.println("loupArdent version <" + VERSION + ">");
+                Version version = Version.build();
+                System.out.println(version.getProgramName() + "version <" + version.getProgramVersion() + ">");
                 System.out.println("Choix :");
                 System.out.println("1.Loup*Ardent");
                 System.out.println("2.Defis Fantastiques");

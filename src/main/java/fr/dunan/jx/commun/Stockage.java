@@ -49,8 +49,7 @@ public class Stockage {
     public static void serialise(APersonnage p) {
         FileOutputStream fichier = null;
         try {
-            fichier = new FileOutputStream(CHEMIN_DES_PERSONNAGES + "/"
-                    + p.getNom() + ".xml");
+            fichier = new FileOutputStream(p.getNom() + ".xml");
         } catch (java.io.IOException e) {
             System.err.println("Erreur lors de la création du fichier de sortie");
             e.printStackTrace();

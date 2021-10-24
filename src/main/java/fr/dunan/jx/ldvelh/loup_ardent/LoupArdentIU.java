@@ -3,15 +3,12 @@ package fr.dunan.jx.ldvelh.loup_ardent;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+import com.sun.tools.javac.Main;
 import fr.dunan.jx.commun.AInterfaceUtilisateur;
 import fr.dunan.jx.commun.Stockage;
+import fr.dunan.jx.commun.Version;
 
 public class LoupArdentIU extends AInterfaceUtilisateur {
-    // *****************************************************************************
-
-    public final String _version = "v2.0";
-
-    // *****************************************************************************
 
     public LoupArdentIU() {
         entree = new Scanner(System.in);
@@ -226,7 +223,8 @@ public class LoupArdentIU extends AInterfaceUtilisateur {
         boolean fin = false;
         fin:
         while (!fin) {
-            System.out.println("loupArdent version <" + _version + ">");
+            Version version = Version.build();
+            System.out.println(version.getProgramName() + "version <" + version.getProgramVersion() + ">");
             System.out.println("Choix :");
             System.out.println("1.Cree aléatoirement un personnage");
             System.out.println("2.Crée manuellement un personnage");
