@@ -1,22 +1,26 @@
-# Ldvelh-combats
+# ldvelh_combats_simulator
+
 Permet d'effectuer les combats des differentes series des Ldvelh par ordinateur
 
 COmment le lancer ?
 
-java -cp ldvelh-combats-<version>.jar fr.dunan.jx.commun.AutoCombatIU
+java -cp ldvelh_combats_simulator-<version>.jar fr.dunan.jx.commun.AutoCombatIU
 
-# Ldvelh-combats
+# ldvelh_combats_simulator
 
-##short description
+## short description
+
 simulate gamebook character generation and combats primarly for demonspawn serie and others.
 
 ## Pre requisites
+
 Install Java Runtime Environment (JRE) version 8.
 
 ## Installation
-Download a version of ldvelh-combats.
-link to ldvelh-combats-<version>.jar.
 
-## How to Use ?
+Download a version of ldvelh_combats_simulator. link to ldvelh_combats_simulator-<version>.jar.
+
+##  How to Use ?
+
 Open a terminal (cmd.exe on windows) or a terminal (bash on linux)
-java -cp ldvelh-combats-<version>.jar fr.dunan.jx.commun.AutoCombatIU
+java -cp ldvelh_combats_simulator-<version>.jar fr.dunan.jx.commun.AutoCombatIU

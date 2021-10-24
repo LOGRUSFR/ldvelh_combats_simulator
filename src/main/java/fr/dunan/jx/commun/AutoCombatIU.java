@@ -21,14 +21,14 @@ package fr.dunan.jx.commun;
 
 import java.util.Scanner;
 
-import fr.dunan.jx.ldvelh.defisFantastiques.DefiFantastiquesUI;
-import fr.dunan.jx.ldvelh.loupArdent.LoupArdentIU;
+import fr.dunan.jx.ldvelh.defis_fantastiques.DefiFantastiquesUI;
+import fr.dunan.jx.ldvelh.loup_ardent.LoupArdentIU;
 
 public class AutoCombatIU
     {
     // *****************************************************************************
 
-    private static final String _version = "v1.0";
+        private static final String VERSION = "v1.0";
 
     // *****************************************************************************
     /**
@@ -46,36 +46,32 @@ public class AutoCombatIU
         _entree.nextLine();
         }
 
-    /**
-     * @param args
-     */
-    public static void main(String[] args)
-        {
-        while (true)
-            {
-            System.out.println("loupArdent version <" + _version + ">");
-            System.out.println("Choix :");
-            System.out.println("1.Loup*Ardent");
-            System.out.println("2.Defis Fantastiques");
-            System.out.println("0.Sortir");
-            // console peut etre null String entree =
-            // System.console().readLine();
-            int cle = -1;
-            try
-                {
-                cle = _entree.nextInt();
-                switch (cle)
-                    {
-                    case 1:
-                        LoupArdentIU laiu = new LoupArdentIU( _entree );
-                        laiu.menu();
-                        appuieTouche();
-                    break;
-                    case 2:
-                        DefiFantastiquesUI dfiu = new DefiFantastiquesUI( _entree );
-                        dfiu.menu();
-                        appuieTouche();
-                    break;
+        /**
+         * @param args
+         */
+        public static void main(String[] args) {
+            while (true) {
+                System.out.println("loupArdent version <" + VERSION + ">");
+                System.out.println("Choix :");
+                System.out.println("1.Loup*Ardent");
+                System.out.println("2.Defis Fantastiques");
+                System.out.println("0.Sortir");
+                // console peut etre null String entree =
+                // System.console().readLine();
+                int cle = -1;
+                try {
+                    cle = _entree.nextInt();
+                    switch (cle) {
+                        case 1:
+                            LoupArdentIU laiu = new LoupArdentIU(_entree);
+                            laiu.menu();
+                            appuieTouche();
+                            break;
+                        case 2:
+                            DefiFantastiquesUI dfiu = new DefiFantastiquesUI(_entree);
+                            dfiu.menu();
+                            appuieTouche();
+                            break;
                     case 0:
                         System.exit(0);
                     break;

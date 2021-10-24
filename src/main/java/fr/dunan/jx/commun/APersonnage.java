@@ -1,26 +1,25 @@
 package fr.dunan.jx.commun;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
 
-public abstract class APersonnage implements java.io.Serializable,IPersonnage {
-	 /**
-    *
-    */
-   private static final long serialVersionUID = 2;
-	
-    private String _nom;
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBException;
+import jakarta.xml.bind.Marshaller;
 
-    public APersonnage()
-    {
-    }
-    
-    public APersonnage( String nom )
-    {
-    this.setNom( nom );
-    }
-    
+public abstract class APersonnage implements java.io.Serializable, IPersonnage {
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = 2;
+
+	private String _nom;
+
+	public APersonnage() {
+	}
+
+	public APersonnage(String nom) {
+		this.setNom(nom);
+	}
+
 	/**
 	 * @return the _nom
 	 */

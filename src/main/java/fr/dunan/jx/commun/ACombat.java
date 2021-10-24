@@ -1,47 +1,24 @@
 package fr.dunan.jx.commun;
 
-public abstract class ACombat implements ICombat
-    {
+import lombok.Getter;
+import lombok.Setter;
 
-    private APersonnage _premier;
+public abstract class ACombat implements ICombat {
 
-    private APersonnage _second;
+    @Getter
+    @Setter
+    private APersonnage premier;
 
-    private APersonnage _victorieux;
+    @Getter
+    @Setter
+    private APersonnage second;
 
-    public ACombat( APersonnage p1, APersonnage p2 )
-        {
+    @Getter
+    @Setter
+    private APersonnage victorieux;
+
+    protected ACombat() {
         setVictorieux(null);
-        }
-    
-    public APersonnage getPremier()
-        {
-        return _premier;
-        }
-
-    public void setPremier( APersonnage _premier)
-        {
-        this._premier = _premier;
-        }
-
-    public APersonnage getSecond()
-        {
-        return _second;
-        }
-
-    public void setSecond( APersonnage _second)
-        {
-        this._second = _second;
-        }
-
-    public APersonnage getVictorieux()
-        {
-        return _victorieux;
-        }
-
-    public void setVictorieux( APersonnage _victorieux)
-        {
-        this._victorieux = _victorieux;
-        }
-    
     }
+
+}
