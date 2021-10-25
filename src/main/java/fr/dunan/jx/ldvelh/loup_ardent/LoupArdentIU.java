@@ -224,7 +224,7 @@ public class LoupArdentIU extends AInterfaceUtilisateur {
         fin:
         while (!fin) {
             Version version = Version.build();
-            System.out.println(version.getProgramName() + "version <" + version.getProgramVersion() + ">");
+            System.out.println("Loup*ardent version <" + version.getProgramVersion() + ">");
             System.out.println("Choix :");
             System.out.println("1.Cree aléatoirement un personnage");
             System.out.println("2.Crée manuellement un personnage");

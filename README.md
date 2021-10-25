@@ -6,16 +6,26 @@ Simulate gamebook character generation and combats primarly for demonspawn serie
 
 ## Pre requisites
 
-Multi OS as it a java program. Install Java Runtime Environment (JRE) version 8.
+Multi OS as it a java program.  
+Just install Java Runtime Environment (JRE) version 11.
+
+An exemple of check :
+
+Open a terminal (cmd.exe on windows) or a terminal (bash on linux).
+
+`java --version`
+
+`openjdk 11.0.11 2021-04-20 OpenJDK Runtime Environment (build 11.0.11+9-Ubuntu-0ubuntu2)
+OpenJDK 64-Bit Server VM (build 11.0.11+9-Ubuntu-0ubuntu2, mixed mode, sharing)
+`
 
 ## Installation
 
-Download a version of https://github.com/logrusFr/ldvelh_combats_simulator/releases/download/1.0.0/ldvelh_combats_simulator-1.0.0.jar.zip[ldvelh_combats_simulator]
+Download a version of [ldvelh_combats_simulator-Releases](https://github.com/logrusFr/ldvelh_combats_simulator/releases)
 .
 
 ## How to Use ?
 
 Open a terminal (cmd.exe on windows) or a terminal (bash on linux).
-[source,shell]
-----
-java -cp ldvelh_combats_simulator-<version>.jar fr.dunan.jx.commun.AutoCombatIU r.dunan.jx.commun.AutoCombatIU
+
+`java -cp ldvelh_combats_simulator-<version>.jar` 

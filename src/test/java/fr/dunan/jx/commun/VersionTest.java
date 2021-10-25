@@ -1,24 +1,27 @@
 package fr.dunan.jx.commun;
 
-import com.jcabi.manifests.Manifests;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import java.util.jar.Attributes;
+import java.util.jar.Manifest;
 
 class VersionTest {
 
     Version version;
 
+    //TODO change to integration test w/ jar
+
     @BeforeEach
     @Test
     void build() {
-        //Manifest pas charge lors d une exec manuelle
-        Manifests.DEFAULT.put("Implementation-Title", "ldvelh_combats_simulator");
-        Manifests.DEFAULT.put("Implementation-Version", "1.1.1");
-        version = Version.build();
+        //Manifest pas charge lors d une exec loclae sans jar...
+        Manifest mf = new Manifest();
+        Attributes attrs = mf.getMainAttributes();
+        attrs.put(Attributes.Name.IMPLEMENTATION_TITLE, "myProgram");
+        attrs.put(Attributes.Name.IMPLEMENTATION_VERSION, "myVersion");
+        version = new Version(mf);
         Assertions.assertNotNull(version);
     }
 

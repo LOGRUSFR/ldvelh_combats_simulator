@@ -48,7 +48,7 @@ public class AutoCombatIU
         public static void main(String[] args) {
             while (true) {
                 Version version = Version.build();
-                System.out.println(version.getProgramName() + "version <" + version.getProgramVersion() + ">");
+                System.out.println(version.getProgramName() + " version <" + version.getProgramVersion() + ">");
                 System.out.println("Choix :");
                 System.out.println("1.Loup*Ardent");
                 System.out.println("2.Defis Fantastiques");

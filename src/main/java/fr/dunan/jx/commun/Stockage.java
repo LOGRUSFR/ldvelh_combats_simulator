@@ -29,7 +29,6 @@ import java.io.FileOutputStream;
 import java.io.FilenameFilter;
 
 public class Stockage {
-    private static final String CHEMIN_DES_PERSONNAGES = "src/main/ressources";
 
     public static void listePersonnage() {
         FilenameFilter filtreExtensionFichier = new FilenameFilter() {
@@ -37,11 +36,11 @@ public class Stockage {
                 return arg1.endsWith(".xml");
             }
         };
-        File repertoire = new File(CHEMIN_DES_PERSONNAGES);
-        String[] children = repertoire.list(filtreExtensionFichier);
-        for (int i = 0; i < children.length; i++) {
-            System.out.println(children[i].substring(0,
-                    children[i].lastIndexOf(".xml")));
+        File repertoire = new File(".");
+        String[] childrens = repertoire.list(filtreExtensionFichier);
+        for (String children : childrens) {
+            System.out.println(children.substring(0,
+                    children.lastIndexOf(".xml")));
         }
 
     }
@@ -67,8 +66,7 @@ public class Stockage {
             throws FileNotFoundException {
         APersonnage p = null;
         FileInputStream fichier;
-        fichier = new FileInputStream(CHEMIN_DES_PERSONNAGES + "/"
-                + nomPersonnage + ".xml");
+        fichier = new FileInputStream(nomPersonnage + ".xml");
         try (XMLDecoder decoder = new XMLDecoder(new BufferedInputStream(fichier))) {
             p = (APersonnage) decoder.readObject();
         } catch (final Exception e) {

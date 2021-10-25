@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven 3.6.3
+Built-By: fdunan
+Build-Jdk: 11.0.11
+Implementation-Title: ldvelh_combats_simulator
+Implementation-Version: 1.1.1
+Implementation-Vendor-Id: fr.dunan.jx.ldvelh
+Implementation-URL: https://github.com/logrusFr/ldvelh_combats_simulator
+Main-Class: fr.dunan.jx.commun.AutoCombatIU
+

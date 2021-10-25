@@ -5,13 +5,9 @@ import java.util.Scanner;
 
 import fr.dunan.jx.commun.AInterfaceUtilisateur;
 import fr.dunan.jx.commun.Stockage;
+import fr.dunan.jx.commun.Version;
 
 public class DefiFantastiquesUI extends AInterfaceUtilisateur {
-    // *****************************************************************************
-
-    public final String _version = "v1.0";
-
-    // *****************************************************************************
 
     public DefiFantastiquesUI() {
         entree = new Scanner(System.in);
@@ -173,7 +169,7 @@ public class DefiFantastiquesUI extends AInterfaceUtilisateur {
         boolean fin = false;
         fin:
         while (!fin) {
-            System.out.println("defis fantastiques version <" + _version + ">");
+            System.out.println("defis fantastiques version <" + Version.build().getProgramVersion() + ">");
             System.out.println("Choix :");
             System.out.println("1.Cree un personnage");
             System.out.println("2.Ajoute un personnage");
