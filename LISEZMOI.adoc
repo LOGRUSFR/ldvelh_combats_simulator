@@ -1,0 +1,131 @@
+= BIENVENUE SUR LE SITE DE L'OUTIL "ldvelh_combats_simulator"
+:hardbreaks:
+:toc:
+
+== Courte description
+
+Permet d'effectuer les combats des différentes series des "Livres dont vous êtes le héros" en étant assisté par un ordinateur.
+En effet, dans l'exemple de la série "Loup*Ardent", cela s'avère... nécessaire !
+
+== Pré-requis
+
+* Un ordinateur exécutant linux ou windows (ou autre...)
+
+* Un environnement d'exécution Java (JRE) version 11 minimum
+
+Un exemple de verification pour ce dernier point :
+
+Ouvrir un terminal (cmd.exe sous windows) ou un terminal (bash sous linux) et saisir :
+
+ java --version
+
+La sortie doit comporter la version 11.
+
+.Un exemple sous Ubuntu :
+....
+openjdk 11.0.11 2021-04-20 OpenJDK Runtime Environment (build 11.0.11+9-Ubuntu-0ubuntu2)
+OpenJDK 64-Bit Server VM (build 11.0.11+9-Ubuntu-0ubuntu2, mixed mode, sharing)
+....
+
+Si le JRE n'est pas installé ou que la version est incorrecte, suivre la procédure suivante :
+
+* https://www.oracle.com/java/technologies/downloads/[Télécharger Java version >= 11]
+* L'installer
+
+== Installation
+
+Télécharger la version la plus récente du programme https://github.com/logrusFr/ldvelh_combats_simulator/releases[ldvelh_combats_simulator] dans un répertoire sur lequel vous disposez des droits d'écriture.
+
+.exemple
+ c:\users\mon_utilisateur_windows\Desktop
+
+== Comment l'utiliser ?
+
+Ouvrir un terminal (cmd.exe sous windows) ou un terminal (bash sous linux) et saisir :
+
+ java -cp ldvelh_combats_simulator-<version>.jar
+
+== ANNEXES
+
+=== Plus d'infos pour les utilisateurs de Windows pour installer un environnement JAVA...
+
+Démarrer -> programmes -> accessoires -> Invite de commande Taper: `java -version`
+Deux cas se présentent :
+
+* Cas 1 :
+
+.Le texte suivant s'affiche :
+ java n'est pas reconnu en tant que commande interne ou externe, un programme exécutable ou un fichier de commande
+
+il te faut télécharger : https://www.oracle.com/java/technologies/downloads/[Télécharger Java version > 11]
+
+puis
+
+* l'installer
+
+* l'ajouter au "path"
+
+`Menu démarrer -> Clic droit sur le poste de travail -> Propriété -> Onglet Avancé -> Bouton variable d'environnement`
+
+Et la tu double cliques sur la variable path en bas puis tu ajoutes un point virgule à la fin des chemins et tu rajoutes "chemin de ton répertoire ou est installé java"\bin
+
+java sera exécutable partout !
+
+* Cas 2:
+le texte te donnant la version de ton JRE est inferieure à 11. Il faut reprendre le Cas 1.
+
+=== Changelog
+
+==== Programme ldvelh_combats_simulator & ldvelh-combats
+
+cf https://github.com/LOGRUSFR/ldvelh_combats_simulator/releases[Dépôt GitHub du projet]
+
+==== Programme loup-ardent
+
+* v0.1 : Livraison initiale
+
+* v1.0 : Ajout de la gestion d'Exterminator Testé avec "La Horde des Démons"
+
+=== Problèmes connus
+
+* PROBLÈME J'ai créé un perso, les caractéristiques s'affichent mais quand je veux l'enregistrer ça me fait:
+
+....
+java.io.FileNotFoundException: Loup.ser (Accès refusé)
+at java.io.FileOutputStream.open (Native Method)
+at java.io.FileOutputStream.(init)(Unknown Source)
+at java.io.FileOutputStream.(init)(Unknown Source)
+at fr.fdunan.jdr.c.a(Unknown Source)
+at fr.fdunan.jdr.InterfaceUtilisateur.main(Unknown Source)
+....
+
+* SOLUTION lancer ldvelh_combats_simulator-vx.y.jar dans un répertoire ou l utilisateur Windows qui lance la commande a les droits en écriture.
+
+.exemple:
+* copier `ldvelh_combats_simulator-1.1.1.jar` dans `c:\Users\MonUser\Desktop` avec l explorateur
+* lancer l interpréteur de commandes
+
+Taper :
+
+....
+cd c:\Users\MonUser  (taper entrée sur le clavier)
+java -jar ldvelh_combats_simulator-1.1.1.jar (taper entrée sur le clavier)
+....
+
+=== Links
+
+==== site planete-ldvelh.com
+
+.présentation
+http://planete-ldvelh.com/page/liens.html
+
+.specifique loup*ardent
+http://planete-ldvelh.com/page/loup1.html
+
+.fil dédié du forum
+http://www.la-taverne-des-aventuriers.com/t3997-loupardent-outil-outil-pour-gerer-les-combats
+
+==== serie loup*ardent
+
+http://en.wikipedia.org/wiki/Sagas_of_the_Demonspawn
+http://fr.wikipedia.org/wiki/Loup*_Ardent
