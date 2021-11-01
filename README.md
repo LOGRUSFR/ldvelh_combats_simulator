@@ -6,10 +6,13 @@ Simulate gamebook character generation and combats primarly for demonspawn serie
 
 ## Pre requisites
 
-Multi OS as it a java program.  
-Just install Java Runtime Environment (JRE) version 11.
+- A computer running any OS as it a java program.
 
-An exemple of check :
+- A Java Runtime Environment (JRE)  >= 11
+
+The prerequisites might be preinstalled.
+
+An exemple of check under Linux :
 
 Open a terminal (cmd.exe on windows) or a terminal (bash on linux).
 
@@ -19,13 +22,30 @@ Open a terminal (cmd.exe on windows) or a terminal (bash on linux).
 OpenJDK 64-Bit Server VM (build 11.0.11+9-Ubuntu-0ubuntu2, mixed mode, sharing)
 `
 
+If it is not installed, or Java is not the correct version, just :
+
+- [Download Java version > 11](https://www.oracle.com/java/technologies/downloads/)
+- Install it
+
 ## Installation
 
-Download a version of [ldvelh_combats_simulator-Releases](https://github.com/logrusFr/ldvelh_combats_simulator/releases)
+Download the last version
+of [ldvelh_combats_simulator-Releases](https://github.com/logrusFr/ldvelh_combats_simulator/releases)
 .
 
 ## How to Use ?
 
-Open a terminal (cmd.exe on windows) or a terminal (bash on linux).
+- Open a terminal (cmd.exe on windows) or a terminal (bash on linux).
 
-`java -cp ldvelh_combats_simulator-<version>.jar` 
+`java -cp ldvelh_combats_simulator-<version>.jar`
+
+- Follow the instructions.
+
+## Links
+
+http://planete-ldvelh.com/page/liens.html
+http://en.wikipedia.org/wiki/Sagas_of_the_Demonspawn
+http://fr.wikipedia.org/wiki/Loup*_Ardent
+
+http://www.la-taverne-des-aventuriers.com/t3997-loupardent-outil-outil-pour-gerer-les-combats
+
