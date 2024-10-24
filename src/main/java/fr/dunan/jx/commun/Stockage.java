@@ -27,8 +27,29 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FilenameFilter;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Stream;
 
+//FIXME code non abstrait (DF, LA...) a ameliorer
 public class Stockage {
+    private static final String DF_DATA_DIR = "data/DF";
+    private static final String LA_DATA_DIR = "data/LA";
+
+    private static String [] combine(String[] in1, String[] in2){
+        List<String> list = new ArrayList<>();
+        if( in1 != null)
+            for (String element : in1)
+                list.add(element);
+        if( in2 != null)
+            for (String element : in2)
+                list.add(element);
+
+        // Convert list back to array
+        String[] combinedArray = list.toArray(new String[0]);
+        return combinedArray;
+    }
 
     public static void listePersonnage() {
         FilenameFilter filtreExtensionFichier = new FilenameFilter() {
@@ -36,13 +57,16 @@ public class Stockage {
                 return arg1.endsWith(".xml");
             }
         };
-        File repertoire = new File(".");
-        String[] childrens = repertoire.list(filtreExtensionFichier);
+        File repertoire_DF = new File(DF_DATA_DIR);
+        String[] childrensDF = repertoire_DF.list(filtreExtensionFichier);
+        File repertoire_LA = new File(LA_DATA_DIR);
+        String[] childrensLA = repertoire_LA.list(filtreExtensionFichier);
+
+        String[] childrens = combine(childrensDF, childrensLA);
         for (String children : childrens) {
             System.out.println(children.substring(0,
                     children.lastIndexOf(".xml")));
         }
-
     }
 
     public static void serialise(APersonnage p) {
