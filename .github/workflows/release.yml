@@ -13,6 +13,9 @@ jobs:
       - name: Checkout the repository
         uses: actions/checkout@v3  # Checkout the repository code
 
+      - name: Install xml parser
+        run: sudo apt-get install -y libxml2-utils
+
       - name: Extract version from pom.xml
         id: extract_pom_value
         run: |
@@ -23,7 +26,8 @@ jobs:
           echo "POM_VERSION=$POM_VERSION" >> $GITHUB_ENV
 
       - name: Use the extracted version
-        run: echo "The version from the pom.xml is: ${{ env.POM_VERSION }}"
+        run: |
+          echo "The version from the pom.xml is: $POM_VERSION"
 
       - name: Create Release
         id: create_release
