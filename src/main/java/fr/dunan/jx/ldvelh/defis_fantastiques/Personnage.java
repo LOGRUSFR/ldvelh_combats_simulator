@@ -29,40 +29,26 @@ import lombok.Getter;
 import lombok.Setter;
 
 
+@Getter
+@Setter
 @XmlRootElement
 public class Personnage extends APersonnage {
     private static final long serialVersionUID = 2L;
 
-    @Getter
-    @Setter
     private int habileteCourante;
 
-    @Getter
-    @Setter
     private int habileteInitiale;
 
-    @Getter
-    @Setter
     private int enduranceInitiale;
 
-    @Getter
-    @Setter
     private int enduranceCourante;
 
-    @Getter
-    @Setter
     private int chanceInitiale;
 
-    @Getter
-    @Setter
     private int chanceCourante;
 
-    @Getter
-    @Setter
     private HashMap<String, String> equipement;
 
-    @Getter
-    @Setter
     private int or;
 
     public Personnage() {
