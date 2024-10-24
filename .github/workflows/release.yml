@@ -44,6 +44,6 @@ jobs:
         uses: actions/upload-release-asset@v1
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./path/to/your/asset.zip  # Path to your release asset
-          asset_name: asset.zip  # Name of the asset in the release
+          asset_path: .target/ldvelh_combats_simulator-${{ env.POM_VERSION }}.jar  # Path to your release asset
+          asset_name: ldvelh_combats_simulator-${{ env.POM_VERSION }}.jar  # Name of the asset in the release
           asset_content_type: application/zip  # Content type of the asset
