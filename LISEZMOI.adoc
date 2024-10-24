@@ -45,6 +45,13 @@ Ouvrir un terminal (cmd.exe sous windows) ou un terminal (bash sous linux) et sa
 
  java -cp ldvelh_combats_simulator-<version>.jar
 
+== Le coin du developpeur
+
+.Prerequis
+* Java SDK == 11
+* Maven == 3.8
+* Lombok == 1.18.28
+
 == ANNEXES
 
 === Plus d'infos pour les utilisateurs de Windows pour installer un environnement JAVA...
