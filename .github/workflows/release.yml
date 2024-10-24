@@ -57,4 +57,4 @@ jobs:
           asset_name: ldvelh_combats_simulator-${{ env.POM_VERSION }}.jar  # Name of the asset in the release
           asset_content_type: application/zip  # Content type of the asset
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
