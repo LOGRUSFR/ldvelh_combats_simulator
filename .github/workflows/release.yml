@@ -13,6 +13,9 @@ jobs:
       - name: Checkout the repository
         uses: actions/checkout@v3  # Checkout the repository code
 
+      - name: Install xml parser
+        run: sudo apt-get install -y libxml2-utils
+
       - name: Extract version from pom.xml
         id: extract_pom_value
         run: |
