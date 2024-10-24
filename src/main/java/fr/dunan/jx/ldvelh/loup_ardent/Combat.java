@@ -23,9 +23,9 @@ import fr.dunan.jx.commun.ACombat;
 import fr.dunan.jx.commun.Des;
 
 public class Combat extends ACombat {
-    private int seuilReussitePremier;
+    private final int seuilReussitePremier;
 
-    private int seuilReussiteSecond;
+    private final int seuilReussiteSecond;
 
     private int limiteAssautPremier;
 

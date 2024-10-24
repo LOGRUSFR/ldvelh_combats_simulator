@@ -27,7 +27,7 @@ public enum Armures {
     COTTE_DE_MAILLES(8), COTTE_DE_MAILLES_ET_BOUCLIER(13),
     CUIRASSE(5), CUIRASSE_ET_BOUCLIER(10), BOUCLIER(7);
 
-    protected int bonusProtection;
+    private int bonusProtection;
 
     /**
      * Constructeur

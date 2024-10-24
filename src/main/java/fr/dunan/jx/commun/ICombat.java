@@ -9,5 +9,5 @@ package fr.dunan.jx.commun;
  */
 public interface ICombat
     {
-    public void lanceAssauts();
+    void lanceAssauts();
     }

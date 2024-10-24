@@ -5,15 +5,14 @@ import lombok.Getter;
 import java.util.jar.Attributes;
 import java.util.jar.Manifest;
 
+@Getter
 public final class Version {
 
-    private static Version versionSingleton;
+    private static Version versionSingleton = null;
 
-    @Getter
-    private String programName;
+    private final String programName;
 
-    @Getter
-    private String programVersion;
+    private final String programVersion;
 
     private Version() {
         Package mainPackage = Version.class.getPackage();

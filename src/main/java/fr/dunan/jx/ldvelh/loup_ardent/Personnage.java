@@ -210,9 +210,7 @@ public class Personnage extends APersonnage {
     }
 
     public boolean estMort() {
-        if (pdv_courant <= 0)
-            return (true);
-        return false;
+        return pdv_courant <= 0;
     }
 
     public void exportXml() {
