@@ -7,13 +7,13 @@ import fr.dunan.jx.commun.AInterfaceUtilisateur;
 import fr.dunan.jx.commun.Stockage;
 import fr.dunan.jx.commun.Version;
 
-public class DefiFantastiquesUI extends AInterfaceUtilisateur {
+public class DefisFantastiquesUI extends AInterfaceUtilisateur {
 
-    public DefiFantastiquesUI() {
+    public DefisFantastiquesUI() {
         entree = new Scanner(System.in);
     }
 
-    public DefiFantastiquesUI(Scanner entree) {
+    public DefisFantastiquesUI(Scanner entree) {
         this.entree = entree;
     }
 

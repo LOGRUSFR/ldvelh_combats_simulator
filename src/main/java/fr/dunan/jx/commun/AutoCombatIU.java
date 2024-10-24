@@ -21,8 +21,7 @@ package fr.dunan.jx.commun;
 
 import java.util.Scanner;
 
-import com.sun.tools.javac.Main;
-import fr.dunan.jx.ldvelh.defis_fantastiques.DefiFantastiquesUI;
+import fr.dunan.jx.ldvelh.defis_fantastiques.DefisFantastiquesUI;
 import fr.dunan.jx.ldvelh.loup_ardent.LoupArdentIU;
 
 public class AutoCombatIU
@@ -65,7 +64,7 @@ public class AutoCombatIU
                             appuieTouche();
                             break;
                         case 2:
-                            DefiFantastiquesUI dfiu = new DefiFantastiquesUI(_entree);
+                            DefisFantastiquesUI dfiu = new DefisFantastiquesUI(_entree);
                             dfiu.menu();
                             appuieTouche();
                             break;
