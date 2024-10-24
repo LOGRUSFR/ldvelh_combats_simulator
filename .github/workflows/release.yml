@@ -1,0 +1,45 @@
+name: Create Release
+
+on:
+  push:
+    branches:
+      - master  # Trigger workflow on push to the master branch
+
+jobs:
+  create_release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3  # Checkout the repository code
+
+      - name: Extract version from pom.xml
+        id: extract_pom_value
+        run: |
+          # Extract version from pom.xml using xmllint or grep
+          POM_VERSION=$(xmllint --xpath "//*[local-name()='project']/*[local-name()='version']/text()" pom.xml)
+          echo "POM_VERSION=$POM_VERSION"
+          # Set the version as an environment variable
+          echo "POM_VERSION=$POM_VERSION" >> $GITHUB_ENV
+
+      - name: Use the extracted version
+        run: echo "The version from the pom.xml is: ${{ env.POM_VERSION }}"
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub automatically provides this token
+        with:
+          tag_name: ${{ env.POM_VERSION }}  # Use the current commit SHA as the tag name
+          release_name: ${{ env.POM_VERSION }}
+          draft: false
+          prerelease: false
+
+      - name: Upload Release Assets
+        uses: actions/upload-release-asset@v1
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./path/to/your/asset.zip  # Path to your release asset
+          asset_name: asset.zip  # Name of the asset in the release
+          asset_content_type: application/zip  # Content type of the asset
