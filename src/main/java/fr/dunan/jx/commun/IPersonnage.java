@@ -9,14 +9,14 @@ package fr.dunan.jx.commun;
  */
 public interface IPersonnage {
 
-	public void dump();
+	void dump();
 	
-	public boolean estMort();
+	boolean estMort();
 
-	public void restaurePdvCourantsParIncrement(int nombrePdvRegagnes);
+	void restaurePdvCourantsParIncrement(int nombrePdvRegagnes);
 
-	public void restaurePdvCourantsParTotal(int nouveauTotalPdvCourants);
+	void restaurePdvCourantsParTotal(int nouveauTotalPdvCourants);
 
-	public void rendPdvInitiaux();
+	void rendPdvInitiaux();
 
 }

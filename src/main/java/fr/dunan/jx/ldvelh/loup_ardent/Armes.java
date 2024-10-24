@@ -26,7 +26,7 @@ public enum Armes {
     RIEN(0), EPEE(10), FLEAU(7), FLECHE(10), GOURDIN(8), HACHE(15), HALLEBARDE(12), JAVELOT(
             12), LANCE(12), MASSE(14), POIGNARD(5), EXTERMINATOR(20), EXTERMINATOR_ECLAIRANTE(20);
 
-    private int bonusDegat;
+    private final int bonusDegat;
 
     /**
      * Constructeur
@@ -36,9 +36,7 @@ public enum Armes {
     }
 
     public boolean isExterminator() {
-        if (this == Armes.EXTERMINATOR || this == Armes.EXTERMINATOR_ECLAIRANTE)
-            return (true);
-        return (false);
+        return this == Armes.EXTERMINATOR || this == Armes.EXTERMINATOR_ECLAIRANTE;
     }
 
     public int getBonusDegat() {

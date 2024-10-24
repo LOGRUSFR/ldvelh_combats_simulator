@@ -32,7 +32,7 @@ public class AutoCombatIU
      * V1.0: - Utilisation du projet loup ardent - Refactor code (design) -
      * Ajout packages defis fantastiques
      */
-    private static Scanner      _entree  = new Scanner(System.in);
+    private static final Scanner      _entree  = new Scanner(System.in);
 
     private static void appuieTouche()
         {

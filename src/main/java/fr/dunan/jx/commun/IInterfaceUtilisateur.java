@@ -2,19 +2,19 @@ package fr.dunan.jx.commun;
 
 public interface IInterfaceUtilisateur
     {
-    public void creePersonnage();
+    void creePersonnage();
     
-    public void affichePersonnage();
+    void affichePersonnage();
     
-    public void ajouteNouveauPersonnage();
+    void ajouteNouveauPersonnage();
     
-    public void lanceCombats();
+    void lanceCombats();
     
-    public void modifieCaracteristiques();
+    void modifieCaracteristiques();
     
-    public void restaurePdv();
+    void restaurePdv();
     
-    public void equipePersonnageExistant();
+    void equipePersonnageExistant();
 
         
     }
