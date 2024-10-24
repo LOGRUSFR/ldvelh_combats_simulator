@@ -41,6 +41,13 @@ of [ldvelh_combats_simulator-Releases](https://github.com/logrusFr/ldvelh_combat
 
 - Follow the instructions.
 
+## Dev's corner
+
+.Prerequisites
+* Java SDK == 11
+* Maven == 3.8
+* Lombok == 1.18.28
+
 ## Links
 
 http://planete-ldvelh.com/page/liens.html

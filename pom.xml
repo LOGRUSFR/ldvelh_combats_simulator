@@ -4,7 +4,7 @@
 
     <groupId>fr.dunan.jx.ldvelh</groupId>
     <artifactId>ldvelh_combats_simulator</artifactId>
-    <version>1.1.1</version>
+    <version>1.1.2</version>
 
     <name>ldvelh_combats_simulator</name>
     <description>Simulate gamebook character generation and combats.</description>
@@ -24,7 +24,8 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.22</version>
+            <version>1.18.28</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- JAXB removed from JAVA 11...
@@ -64,11 +65,13 @@
         <!--            <artifactId>log4j-api</artifactId>-->
         <!--            <version>2.7</version>-->
         <!--        </dependency>-->
+
         <!--        <dependency>-->
         <!--            <groupId>org.apache.logging.log4j</groupId>-->
         <!--            <artifactId>log4j-core</artifactId>-->
         <!--            <version>2.7</version>-->
         <!--        </dependency>-->
+
         <!--        <dependency>-->
         <!--            <groupId>org.apache.logging.log4j</groupId>-->
         <!--            <artifactId>log4j-slf4j-impl</artifactId>-->
@@ -78,7 +81,26 @@
     </dependencies>
 
     <build>
+
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>  <!-- Use the latest version available -->
+                <configuration>
+                    <source>11</source>  <!-- or the version of Java you're using -->
+                    <target>11</target>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>1.18.28</version> <!-- Latest version -->
+                        </path>
+                    </annotationProcessorPaths>
+                </configuration>
+            </plugin>
+
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
