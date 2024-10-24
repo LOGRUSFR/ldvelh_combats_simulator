@@ -161,7 +161,7 @@ public class DefisFantastiquesUI extends AInterfaceUtilisateur {
             return;
         }
         p.dump();
-        p.dump();
+        //TODO modifier l equipement
         Stockage.serialise(p);
     }
 
@@ -171,15 +171,14 @@ public class DefisFantastiquesUI extends AInterfaceUtilisateur {
         while (!fin) {
             System.out.println("defis fantastiques version <" + Version.build().getProgramVersion() + ">");
             System.out.println("Choix :");
-            System.out.println("1.Cree un personnage");
-            System.out.println("2.Ajoute un personnage");
+            System.out.println("1.Crée automatiquement un personnage");
+            System.out.println("2.Crée manuellement un personnage");
             System.out.println("3.Liste les personnages disponibles");
             System.out.println("4.Affiche le détail d'un personnage");
             System.out.println("5.Equipe un personnage existant");
             System.out.println("6.Deroule un combat");
             System.out.println("7.Modifie caractéristiques");
             System.out.println("8.Restaure pdv");
-            System.out.println("9.Export du personnage en fichier xml");
             System.out.println("0.Sortir");
             // console peut etre null String entree =
             // System.console().readLine();
@@ -219,10 +218,6 @@ public class DefisFantastiquesUI extends AInterfaceUtilisateur {
                         restaurePdv();
                         appuieTouche();
                         break;
-                    case 9:
-                        exportText();
-                        appuieTouche();
-                        break;
                     case 0:
                         fin = true;
                         break fin;
@@ -234,9 +229,5 @@ public class DefisFantastiquesUI extends AInterfaceUtilisateur {
                 appuieTouche();
             }
         }
-    }
-
-    public void exportText() {
-        // TODO Auto-generated method stub
     }
 }
