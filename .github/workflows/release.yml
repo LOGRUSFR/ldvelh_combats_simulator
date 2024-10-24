@@ -23,7 +23,8 @@ jobs:
           echo "POM_VERSION=$POM_VERSION" >> $GITHUB_ENV
 
       - name: Use the extracted version
-        run: echo "The version from the pom.xml is: ${{ env.POM_VERSION }}"
+        run: |
+          echo "The version from the pom.xml is: $POM_VERSION"
 
       - name: Create Release
         id: create_release
