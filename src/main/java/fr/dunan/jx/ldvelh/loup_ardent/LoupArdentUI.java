@@ -3,18 +3,17 @@ package fr.dunan.jx.ldvelh.loup_ardent;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-import com.sun.tools.javac.Main;
 import fr.dunan.jx.commun.AInterfaceUtilisateur;
 import fr.dunan.jx.commun.Stockage;
 import fr.dunan.jx.commun.Version;
 
-public class LoupArdentIU extends AInterfaceUtilisateur {
+public class LoupArdentUI extends AInterfaceUtilisateur {
 
-    public LoupArdentIU() {
+    public LoupArdentUI() {
         entree = new Scanner(System.in);
     }
 
-    public LoupArdentIU(Scanner entree) {
+    public LoupArdentUI(Scanner entree) {
         this.entree = entree;
     }
 

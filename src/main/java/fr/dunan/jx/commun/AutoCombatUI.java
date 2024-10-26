@@ -22,9 +22,9 @@ package fr.dunan.jx.commun;
 import java.util.Scanner;
 
 import fr.dunan.jx.ldvelh.defis_fantastiques.DefisFantastiquesUI;
-import fr.dunan.jx.ldvelh.loup_ardent.LoupArdentIU;
+import fr.dunan.jx.ldvelh.loup_ardent.LoupArdentUI;
 
-public class AutoCombatIU
+public class AutoCombatUI
     {
     /**
      * RELEASE NOTES
@@ -59,7 +59,7 @@ public class AutoCombatIU
                     cle = _entree.nextInt();
                     switch (cle) {
                         case 1:
-                            LoupArdentIU laiu = new LoupArdentIU(_entree);
+                            LoupArdentUI laiu = new LoupArdentUI(_entree);
                             laiu.menu();
                             appuieTouche();
                             break;

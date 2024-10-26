@@ -37,7 +37,7 @@ of [ldvelh_combats_simulator-Releases](https://github.com/logrusFr/ldvelh_combat
 
 - Open a terminal (cmd.exe on windows) or a terminal (bash on linux).
 
-`java -cp ldvelh_combats_simulator-<version>.jar`
+`java -jar ldvelh_combats_simulator-<version>.jar`
 
 - Follow the instructions.
 

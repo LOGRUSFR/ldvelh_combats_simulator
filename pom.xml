@@ -104,12 +104,12 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>3.0.2</version>
+                <version>3.2.0</version>
                 <!-- Put the POM version in the JAR manifest-->
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>fr.dunan.jx.commun.AutoCombatIU</mainClass>
+                            <mainClass>fr.dunan.jx.commun.AutoCombatUI</mainClass>
                             <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
                         </manifest>
                     </archive>
@@ -129,7 +129,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>fr.dunan.jx.commun.AutoCombatIU</mainClass>
+                            <mainClass>fr.dunan.jx.commun.AutoCombatUI</mainClass>
                             <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
                         </manifest>
                     </archive>
