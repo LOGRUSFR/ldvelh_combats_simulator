@@ -108,6 +108,9 @@ public class DefisFantastiquesUI extends AInterfaceUtilisateur {
         System.out.println("1: habileté");
         System.out.println("2: endurance");
         System.out.println("3: chance");
+        System.out.println("4: habileté courante");
+        System.out.println("5: endurance courante");
+        System.out.println("6: chance courante");
         int entreeCle = entree.nextInt();
         System.out.println("Valeur caractéristique ?");
         int valeurCaracteristique = entree.nextInt();
@@ -120,6 +123,15 @@ public class DefisFantastiquesUI extends AInterfaceUtilisateur {
                 break;
             case 3:
                 p.setChanceInitiale(valeurCaracteristique);
+                break;
+            case 4:
+                p.setHabileteCourante(valeurCaracteristique);
+                break;
+            case 5:
+                p.setEnduranceCourante(valeurCaracteristique);
+                break;
+            case 6:
+                p.setChanceCourante(valeurCaracteristique);
                 break;
             default:
                 break;

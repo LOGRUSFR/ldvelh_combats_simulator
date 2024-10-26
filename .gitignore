@@ -10,10 +10,13 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-/target/
+target
 
 .classpath
 .project
 .settings/
 
 /ldvelh_combats_simulator.iml
+
+# Local character files
+*.xml
