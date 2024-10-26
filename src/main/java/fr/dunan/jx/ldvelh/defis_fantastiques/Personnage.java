@@ -18,7 +18,9 @@
  */
 package fr.dunan.jx.ldvelh.defis_fantastiques;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 import jakarta.xml.bind.annotation.XmlRootElement;
 
