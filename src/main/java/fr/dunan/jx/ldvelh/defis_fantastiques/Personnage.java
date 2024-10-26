@@ -18,9 +18,7 @@
  */
 package fr.dunan.jx.ldvelh.defis_fantastiques;
 
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 
 import jakarta.xml.bind.annotation.XmlRootElement;
 
@@ -50,12 +48,16 @@ public class Personnage extends APersonnage {
 
     private HashMap<String, String> equipement;
 
+    private List<String> talents;
+
     private int or;
 
     public Personnage() {
         super();
         if(equipement == null)
             equipement = new LinkedHashMap<String,String>();
+        if(talents == null)
+            talents = new ArrayList<String>();
     }
 
     public Personnage(String nom) {
@@ -68,11 +70,14 @@ public class Personnage extends APersonnage {
         habileteCourante = habileteInitiale;
         if(equipement == null)
             equipement = new LinkedHashMap<String,String>();
+        if(talents == null)
+            talents = new ArrayList<String>();
     }
 
     // DUMP
     // *********************************************************************
     public void dump() {
+        System.out.println("Caracteristiques " + String.valueOf('-').repeat(50));
         System.out.println("habilete courante / initiale: <"
                 + habileteCourante + "/" + habileteInitiale + ">");
         System.out.println("endurance courante / initiale: <"
@@ -81,12 +86,19 @@ public class Personnage extends APersonnage {
                 + "/" + chanceInitiale + ">");
         System.out.println("Or: <" + or + ">");
         if (equipement != null) {
-            System.out.println("Equipement :");
+            System.out.println("Equipement " + String.valueOf('-').repeat(50));
             for (Map.Entry<String, String> e : equipement.entrySet()) {
                 System.out.println("Objet <" + e.getKey() + "> effet <"
                         + e.getValue() + ">");
             }
         }
+        if (talents != null) {
+            System.out.println("Talents " + String.valueOf('-').repeat(50));
+            for (String talent : talents) {
+                System.out.println("Talent <" + talent + ">");
+            }
+        }
+        System.out.println(String.valueOf('-').repeat(70));
     }
 
     public void restaurePdvCourantsParIncrement(int nombrePdvRegagnes) {
