@@ -3,6 +3,8 @@ package fr.dunan.jx.ldvelh.defis_fantastiques;
 import fr.dunan.jx.commun.ACombat;
 import fr.dunan.jx.commun.Des;
 
+import java.text.MessageFormat;
+
 public class Combat extends ACombat {
     private Personnage _p1;
     private Personnage _p2;
@@ -31,13 +33,15 @@ public class Combat extends ACombat {
         int numeroAssaut = 1;
         while (_p1.getEnduranceCourante() >= 0
                 || _p2.getEnduranceCourante() >= 0) {
-            System.out.println("*********************************************");
+            System.out.println(String.valueOf('*').repeat(60));
             System.out.println("Assaut <" + numeroAssaut + ">");
-            System.out.println("*********************************************");
+            System.out.println(String.valueOf('-').repeat(60));
             int jetToucherP1 = Des.lance2d6() + _p1.getHabileteCourante();
             int jetToucherP2 = Des.lance2d6() + _p2.getHabileteCourante();
+            System.out.println(MessageFormat.format("Force d''attaque 1 <{0}>,  Force d''attaque 2 <{1}>",jetToucherP1, jetToucherP2));
             if (jetToucherP1 > jetToucherP2) {
                 this.calculeBlessure(_p2);
+                //TODO serialiser la perte de PE
                 if (_p2.estMort())
                     break;
             } else if (jetToucherP1 < jetToucherP2) {
