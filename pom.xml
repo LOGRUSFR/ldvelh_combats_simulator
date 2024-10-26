@@ -5,7 +5,6 @@
     <groupId>fr.dunan.jx.ldvelh</groupId>
     <artifactId>ldvelh_combats_simulator</artifactId>
     <version>1.1.4</version>
-
     <name>ldvelh_combats_simulator</name>
     <description>Simulate gamebook character generation and combats.</description>
     <url>https://github.com/logrusFr/ldvelh_combats_simulator</url>
