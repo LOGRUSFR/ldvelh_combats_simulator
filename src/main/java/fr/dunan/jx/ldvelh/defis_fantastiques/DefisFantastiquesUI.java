@@ -161,7 +161,55 @@ public class DefisFantastiquesUI extends AInterfaceUtilisateur {
             return;
         }
         p.dump();
-        //TODO modifier l equipement
+        System.out.println("Quel equipement ajouter ?");
+        System.out.println("1: Or");
+        System.out.println("2: Arme");
+        System.out.println("3: Armure");
+        System.out.println("4: Sac à dos");
+        System.out.println("5: Lanterne, torche et briquet");
+        System.out.println("6: Potion magique");
+        int entreeCle = entree.nextInt();
+        switch (entreeCle) {
+            case 1:
+                System.out.println("Quantité ?");
+                p.setOr(entree.nextInt());
+                break;
+            case 2:
+                p.getEquipement().put(Equipement.WEAPON.getName(), "");
+                break;
+            case 3:
+                p.getEquipement().put(Equipement.ARMOR.getName(), "");
+                break;
+            case 4:
+                p.getEquipement().put(Equipement.BAG.getName(), "");
+                break;
+            case 5:
+                p.getEquipement().put(Equipement.LIGHT_KIT.getName(), "");
+                break;
+            case 6:
+                p.getEquipement().put(Equipement.FOOD.getName(), "");
+                break;
+            case 7:
+                System.out.println("Type de potion ?");
+                System.out.println("1: Habileté");
+                System.out.println("2: Endurance");
+                System.out.println("3: Chance");
+                entreeCle = entree.nextInt();
+                switch (entreeCle) {
+                    case 1:
+                        p.getEquipement().put(Equipement.POTION_H.getName(), "");
+                        break;
+                    case 2:
+                        p.getEquipement().put(Equipement.POTION_E.getName(), "");
+                        break;
+                    case 3:
+                        p.getEquipement().put(Equipement.POTION_C.getName(), "");
+                        break;
+                }
+                break;
+            default:
+                break;
+        }
         Stockage.serialise(p);
     }
 

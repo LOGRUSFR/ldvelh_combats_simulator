@@ -19,6 +19,7 @@
 package fr.dunan.jx.ldvelh.defis_fantastiques;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 import jakarta.xml.bind.annotation.XmlRootElement;
@@ -53,6 +54,8 @@ public class Personnage extends APersonnage {
 
     public Personnage() {
         super();
+        if(equipement == null)
+            equipement = new LinkedHashMap<String,String>();
     }
 
     public Personnage(String nom) {
@@ -63,6 +66,8 @@ public class Personnage extends APersonnage {
         chanceCourante = chanceInitiale;
         this.habileteInitiale = Des.lance1d6() + 6;
         habileteCourante = habileteInitiale;
+        if(equipement == null)
+            equipement = new LinkedHashMap<String,String>();
     }
 
     // DUMP
