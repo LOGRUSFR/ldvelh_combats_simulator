@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="11.0.25" class="java.beans.XMLDecoder">
+ <object class="fr.dunan.jx.ldvelh.defis_fantastiques.Personnage" id="Personnage0">
+  <void property="chanceCourante">
+   <int>6</int>
+  </void>
+  <void property="chanceInitiale">
+   <int>10</int>
+  </void>
+  <void property="enduranceCourante">
+   <int>6</int>
+  </void>
+  <void property="enduranceInitiale">
+   <int>20</int>
+  </void>
+  <void property="equipement">
+   <void method="put">
+    <string>Epée</string>
+    <string></string>
+   </void>
+   <void method="put">
+    <string>Armure de cuir</string>
+    <string></string>
+   </void>
+   <void method="put">
+    <string>Sac à dos</string>
+    <string></string>
+   </void>
+   <void method="put">
+    <string>Lanterne, torche et briquet</string>
+    <string></string>
+   </void>
+   <void method="put">
+    <string>(utilise)Potion d&apos;Endurance</string>
+    <string></string>
+   </void>
+   <void method="put">
+    <string>Provisions 4 repas</string>
+    <string></string>
+   </void>
+   <void method="put">
+    <string>carte labyrinthe</string>
+    <string></string>
+   </void>
+   <void method="put">
+    <string>couteau argent 5PO</string>
+    <string></string>
+   </void>
+   <void method="put">
+    <string>(utilise)bouteille eau vie 1PO ou 3x+2PE</string>
+    <string></string>
+   </void>
+   <void method="put">
+    <string>epee seigneur squelette si touche,+1 FA round suivant</string>
+    <string></string>
+   </void>
+   <void method="put">
+    <string>casque bronze,+1 H</string>
+    <string></string>
+   </void>
+   <void method="put">
+    <string>miniature cadre argent 2PO</string>
+    <string></string>
+   </void>
+   void method="put">
+   <string>disque obsidienne</string>
+   <string></string>
+  </void>
+   <void method="put">
+    <string>cle D + cle G</string>
+    <string></string>
+   </void>
+   <void method="put">
+    <string>hache pierre polie manche bois</string>
+    <string></string>
+   </void>
+   <void method="put">
+    <string>poignard lancer</string>
+    <string></string>
+   </void>
+   <void method="put">
+    <string>long cable et crochet</string>
+    <string></string>
+   </void>
+  </void>
+  <void property="habileteCourante">
+   <int>13</int>
+  </void>
+  <void property="habileteInitiale">
+   <int>12</int>
+  </void>
+  <void property="nom">
+   <string>Zerathull</string>
+  </void>
+  <void property="or">
+   <int>48</int>
+  </void>
+  <void property="talents">
+   <void method="add">
+    <string>Vide goussets</string>
+   </void>
+   <void method="add">
+    <string>Crocheteur</string>
+   </void>
+   <void method="add">
+    <string>Pas de loup</string>
+   </void>
+  </void>
+ </object>
+</java>
+<!-- chez la braise: indice terre haut du galgal, livre comptes O.D.B 335 -->
+        <!-- guile marchands: acte prop 90 lettre Brabantius -->
+        <!-- chez la voyante ishtar: oeil basilic dans cimetiere => §392 -->

@@ -38,9 +38,10 @@ public class Combat extends ACombat {
             System.out.println(String.valueOf('-').repeat(60));
             int jetToucherP1 = Des.lance2d6() + _p1.getHabileteCourante();
             int jetToucherP2 = Des.lance2d6() + _p2.getHabileteCourante();
-            System.out.println(MessageFormat.format("Force d''attaque 1 <{0}>,  Force d\'attaque 2 <{1}>",jetToucherP1, jetToucherP2));
+            System.out.println(MessageFormat.format("Force d''attaque 1 <{0}>,  Force d''attaque 2 <{1}>",jetToucherP1, jetToucherP2));
             if (jetToucherP1 > jetToucherP2) {
                 this.calculeBlessure(_p2);
+                //TODO serialiser la perte de PE
                 if (_p2.estMort())
                     break;
             } else if (jetToucherP1 < jetToucherP2) {

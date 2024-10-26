@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="11.0.25" class="java.beans.XMLDecoder">
+ <object class="fr.dunan.jx.ldvelh.defis_fantastiques.Personnage">
+  <void property="enduranceInitiale">
+   <int>10</int>
+  </void>
+  <void property="habileteCourante">
+   <int>10</int>
+  </void>
+  <void property="habileteInitiale">
+   <int>10</int>
+  </void>
+  <void property="nom">
+   <string>esprit-pirate</string>
+  </void>
+ </object>
+</java>
