@@ -7,6 +7,8 @@ public class Combat extends ACombat {
     private Personnage _p1;
     private Personnage _p2;
 
+    public static final int DEFAULT_PAUSE_TIME_BETWEEN_ASSAULT_MS=2500;
+
     public Combat(Personnage p1, Personnage p2) {
         super();
         setP1(p1);
@@ -22,6 +24,10 @@ public class Combat extends ACombat {
     }
 
     public void lanceAssauts() {
+        lanceAssauts(DEFAULT_PAUSE_TIME_BETWEEN_ASSAULT_MS);
+    }
+
+    public void lanceAssauts(int pauseTime) {
         int numeroAssaut = 1;
         while (_p1.getEnduranceCourante() >= 0
                 || _p2.getEnduranceCourante() >= 0) {
@@ -43,7 +49,7 @@ public class Combat extends ACombat {
                         .println("Tous les protagonistes ont manqué leur but");
             }
             try {
-                Thread.sleep(2500);
+                Thread.sleep(pauseTime);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
