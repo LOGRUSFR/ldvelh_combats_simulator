@@ -16,7 +16,7 @@ public class CombatTest {
         p2.setEnduranceCourante(10);
 
         Combat combat = new Combat(p1, p2);
-        combat.lanceAssauts();
+        combat.lanceAssauts(0);
 
         Assertions.assertTrue(p2.estMort());
     }
