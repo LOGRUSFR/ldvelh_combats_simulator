@@ -43,7 +43,7 @@ Télécharger la version la plus récente du programme https://github.com/logrus
 
 Ouvrir un terminal (cmd.exe sous windows) ou un terminal (bash sous linux) et saisir :
 
- java -cp ldvelh_combats_simulator-<version>.jar
+ java -jar ldvelh_combats_simulator-<version>.jar
 
 == Le coin du developpeur
 
