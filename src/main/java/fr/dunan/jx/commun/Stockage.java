@@ -30,7 +30,6 @@ import java.io.FilenameFilter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Stream;
 
 //FIXME code non abstrait (DF, LA...) a ameliorer
 public class Stockage {
@@ -40,23 +39,15 @@ public class Stockage {
     private static String [] combine(String[] in1, String[] in2){
         List<String> list = new ArrayList<>();
         if( in1 != null)
-            for (String element : in1)
-                list.add(element);
+            list.addAll(Arrays.asList(in1));
         if( in2 != null)
-            for (String element : in2)
-                list.add(element);
-
+            list.addAll(Arrays.asList(in2));
         // Convert list back to array
-        String[] combinedArray = list.toArray(new String[0]);
-        return combinedArray;
+        return list.toArray(new String[0]);
     }
 
     public static void listePersonnage() {
-        FilenameFilter filtreExtensionFichier = new FilenameFilter() {
-            public boolean accept(File arg0, String arg1) {
-                return arg1.endsWith(".xml");
-            }
-        };
+        FilenameFilter filtreExtensionFichier = (arg0, arg1) -> arg1.endsWith(".xml");
         File repertoire_DF = new File(DF_DATA_DIR);
         String[] childrensDF = repertoire_DF.list(filtreExtensionFichier);
         File repertoire_LA = new File(LA_DATA_DIR);

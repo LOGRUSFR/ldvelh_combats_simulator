@@ -30,7 +30,7 @@ public class DefisFantastiquesUI extends AInterfaceUtilisateur {
     public void affichePersonnage() {
         System.out.println("Veuillez rentrer le nom du personnage :");
         String nom = entree.next();
-        Personnage p = null;
+        Personnage p;
         try {
             p = (Personnage) Stockage.deserialise(nom);
             p.dump();
@@ -46,25 +46,25 @@ public class DefisFantastiquesUI extends AInterfaceUtilisateur {
         System.out.println("Veuillez rentrer le nom du personnage :");
         p.setNom(entree.next());
         System.out.println("Veuillez rentrer l'habileté initiale du personnage :");
-        int valeur = Integer.valueOf(entree.next());
+        int valeur = Integer.parseInt(entree.next());
         p.setHabileteInitiale(valeur);
         p.setHabileteCourante(valeur);
         System.out.println("Veuillez rentrer l'endurance initiale du personnage :");
-        valeur = Integer.valueOf(entree.next());
+        valeur = Integer.parseInt(entree.next());
         p.setEnduranceInitiale(valeur);
         p.setEnduranceCourante(valeur);
         System.out.println("Veuillez rentrer la chance initiale du personnage :");
-        valeur = Integer.valueOf(entree.next());
+        valeur = Integer.parseInt(entree.next());
         p.setChanceInitiale(valeur);
         p.setChanceCourante(valeur);
         System.out.println("Donne des caracteristiques courantes ? (o/n)");
         if (entree.next().equals("o")) {
             System.out.println("Veuillez rentrer l'habileté initiale du personnage :");
-            p.setHabileteInitiale(Integer.valueOf(entree.next()));
+            p.setHabileteInitiale(Integer.parseInt(entree.next()));
             System.out.println("Veuillez rentrer l'endurance initiale du personnage :");
-            p.setEnduranceInitiale(Integer.valueOf(entree.next()));
+            p.setEnduranceInitiale(Integer.parseInt(entree.next()));
             System.out.println("Veuillez rentrer la chance initiale du personnage :");
-            p.setChanceInitiale((Integer.valueOf(entree.next())));
+            p.setChanceInitiale((Integer.parseInt(entree.next())));
         }
         p.dump();
         Stockage.serialise(p);
@@ -79,7 +79,7 @@ public class DefisFantastiquesUI extends AInterfaceUtilisateur {
             System.out.println("Veuillez rentrer le nom du second assaillant :");
             String nomSecond = entree.next();
             Personnage p2 = (Personnage) Stockage.deserialise(nomSecond);
-            Combat c = null;
+            Combat c;
             do {
                 c = new Combat(p1, p2);
                 c.lanceAssauts();
@@ -96,7 +96,7 @@ public class DefisFantastiquesUI extends AInterfaceUtilisateur {
     public void modifieCaracteristiques() {
         System.out.println("Veuillez entrer le nom du personnage :");
         String nom = entree.next();
-        Personnage p = null;
+        Personnage p;
         try {
             p = (Personnage) Stockage.deserialise(nom);
         } catch (FileNotFoundException e) {
@@ -143,7 +143,7 @@ public class DefisFantastiquesUI extends AInterfaceUtilisateur {
     public void restaurePdv() {
         System.out.println("Veuillez rentrer le nom du personnage :");
         String nom = entree.next();
-        Personnage p = null;
+        Personnage p;
         try {
             p = (Personnage) Stockage.deserialise(nom);
         } catch (FileNotFoundException e) {
@@ -183,6 +183,10 @@ public class DefisFantastiquesUI extends AInterfaceUtilisateur {
         }
         System.out.println("Veuillez rentrer le numero du talent choisi:");
         int numeroTalent = Integer.parseInt(entree.next());
+        if(numeroTalent > 6) {
+            System.out.println("Talent inconnu !");
+            return;
+        }
         if(p.getTalents().size()==3) {
             System.out.println("Nombre de talents maximal atteint !");
             return;
@@ -209,7 +213,8 @@ public class DefisFantastiquesUI extends AInterfaceUtilisateur {
         System.out.println("3: Armure");
         System.out.println("4: Sac à dos");
         System.out.println("5: Lanterne, torche et briquet");
-        System.out.println("6: Potion magique");
+        System.out.println("6: Nourriture");
+        System.out.println("7: Potion magique");
         int entreeCle = entree.nextInt();
         switch (entreeCle) {
             case 1:
@@ -273,7 +278,7 @@ public class DefisFantastiquesUI extends AInterfaceUtilisateur {
             System.out.println("0.Sortir");
             // console peut etre null String entree =
             // System.console().readLine();
-            int cle = -1;
+            int cle;
             try {
                 cle = entree.nextInt();
                 switch (cle) {

@@ -30,6 +30,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 
+@Setter
+@Getter
 @XmlRootElement
 public class Personnage extends APersonnage {
     /**
@@ -37,72 +39,38 @@ public class Personnage extends APersonnage {
      */
     private static final long serialVersionUID = 2L;
 
-    @Getter
-    @Setter
     private int force;
 
-    @Getter
-    @Setter
     private int rapidite;
 
-    @Getter
-    @Setter
     private int endurance;
 
-    @Getter
-    @Setter
     private int courage;
 
-    @Getter
-    @Setter
     private int chance;
 
-    @Getter
-    @Setter
     private int magnetisme;
 
-    @Getter
-    @Setter
     private int seduction;
 
-    @Getter
-    @Setter
     private int habilete;
 
-    @Getter
-    @Setter
     private int pdv_initial;
 
-    @Getter
-    @Setter
     private int pdv_courant;
 
-    @Getter
-    @Setter
     private int baseInit;
 
-    @Getter
-    @Setter
     private int bonusToucher;
 
-    @Getter
-    @Setter
     private int bonusDegats;
 
-    @Getter
-    @Setter
     private int bonusProtection;
 
-    @Getter
-    @Setter
     private int limiteAssaut;
 
-    @Getter
-    @Setter
     private Armes arme = Armes.RIEN;
 
-    @Getter
-    @Setter
     private Armures armure = Armures.RIEN;
 
     public Personnage() {

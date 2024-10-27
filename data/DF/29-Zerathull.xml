@@ -47,7 +47,7 @@
     <string></string>
    </void>
    <void method="put">
-    <string>(utilise)bouteille eau vie 1PO ou 3x+2PE</string>
+    <string>(utilise) bouteille eau vie 1PO ou 3x+2PE</string>
     <string></string>
    </void>
    <void method="put">
@@ -62,10 +62,10 @@
     <string>miniature cadre argent 2PO</string>
     <string></string>
    </void>
-   void method="put">
-   <string>disque obsidienne</string>
-   <string></string>
-  </void>
+   <void method="put">
+    <string>disque obsidienne</string>
+    <string></string>
+   </void>
    <void method="put">
     <string>cle D + cle G</string>
     <string></string>

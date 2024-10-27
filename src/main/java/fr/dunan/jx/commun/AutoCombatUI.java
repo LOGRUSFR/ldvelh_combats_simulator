@@ -28,7 +28,7 @@ public class AutoCombatUI
     {
     /**
      * RELEASE NOTES
-     * 
+     * <p>
      * V1.0: - Utilisation du projet loup ardent - Refactor code (design) -
      * Ajout packages defis fantastiques
      */
@@ -42,7 +42,6 @@ public class AutoCombatUI
         }
 
         /**
-         * @param args
          */
         public static void main(String[] args) {
             while (true) {
@@ -54,7 +53,7 @@ public class AutoCombatUI
                 System.out.println("0.Sortir");
                 // console peut etre null String entree =
                 // System.console().readLine();
-                int cle = -1;
+                int cle;
                 try {
                     cle = _entree.nextInt();
                     switch (cle) {
