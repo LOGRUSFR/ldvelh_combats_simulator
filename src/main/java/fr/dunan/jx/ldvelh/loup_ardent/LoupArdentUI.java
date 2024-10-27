@@ -29,7 +29,7 @@ public class LoupArdentUI extends AInterfaceUtilisateur {
     public void affichePersonnage() {
         System.out.println("Veuillez rentrer le nom du personnage :");
         String nom = entree.next();
-        Personnage p = null;
+        Personnage p;
         try {
             p = (Personnage) Stockage.deserialise(nom);
             p.dump();
@@ -43,21 +43,21 @@ public class LoupArdentUI extends AInterfaceUtilisateur {
         System.out.println("Veuillez rentrer le nom du personnage :");
         p.setNom(entree.next());
         System.out.println("Veuillez rentrer la force du personnage :");
-        p.setForce(Integer.valueOf(entree.next()));
+        p.setForce(Integer.parseInt(entree.next()));
         System.out.println("Veuillez rentrer la rapidité du personnage :");
-        p.setRapidite(Integer.valueOf(entree.next()));
+        p.setRapidite(Integer.parseInt(entree.next()));
         System.out.println("Veuillez rentrer l'endurance du personnage :");
-        p.setEndurance(Integer.valueOf(entree.next()));
+        p.setEndurance(Integer.parseInt(entree.next()));
         System.out.println("Veuillez rentrer le courage du personnage :");
-        p.setCourage(Integer.valueOf(entree.next()));
+        p.setCourage(Integer.parseInt(entree.next()));
         System.out.println("Veuillez rentrer l'habileté du personnage :");
-        p.setHabilete(Integer.valueOf(entree.next()));
+        p.setHabilete(Integer.parseInt(entree.next()));
         System.out.println("Veuillez rentrer la chance du personnage :");
-        p.setChance(Integer.valueOf(entree.next()));
+        p.setChance(Integer.parseInt(entree.next()));
         System.out.println("Veuillez rentrer le magnétisme du personnage :");
-        p.setMagnetisme(Integer.valueOf(entree.next()));
+        p.setMagnetisme(Integer.parseInt(entree.next()));
         System.out.println("Veuillez rentrer la séduction du personnage :");
-        p.setSeduction(Integer.valueOf(entree.next()));
+        p.setSeduction(Integer.parseInt(entree.next()));
         System.out.println("Choix des armes et armures:");
         choixArme(p);
         choixArmure(p);
@@ -103,7 +103,7 @@ public class LoupArdentUI extends AInterfaceUtilisateur {
             Personnage p2 = (Personnage) Stockage.deserialise(nomSecond);
             int p1PdvSauve = p1.getPdv_courant();
             int p2PdvSauve = p2.getPdv_courant();
-            Combat c = null;
+            Combat c;
             do {
                 c = new Combat(p1, p2);
                 p1.setPdv_courant(p1PdvSauve);
@@ -123,7 +123,7 @@ public class LoupArdentUI extends AInterfaceUtilisateur {
     public void modifieCaracteristiques() {
         System.out.println("Veuillez entrer le nom du personnage :");
         String nom = entree.next();
-        Personnage p = null;
+        Personnage p;
         try {
             p = (Personnage) Stockage.deserialise(nom);
         } catch (FileNotFoundException e) {
@@ -179,7 +179,7 @@ public class LoupArdentUI extends AInterfaceUtilisateur {
     public void restaurePdv() {
         System.out.println("Veuillez rentrer le nom du personnage :");
         String nom = entree.next();
-        Personnage p = null;
+        Personnage p;
         try {
             p = (Personnage) Stockage.deserialise(nom);
         } catch (FileNotFoundException e) {
@@ -237,7 +237,7 @@ public class LoupArdentUI extends AInterfaceUtilisateur {
             System.out.println("0.Sortir");
             // console peut etre null String entree =
             // System.console().readLine();
-            int cle = -1;
+            int cle;
             try {
                 cle = entree.nextInt();
                 switch (cle) {
@@ -293,7 +293,7 @@ public class LoupArdentUI extends AInterfaceUtilisateur {
     private void exportXml() {
         System.out.println("Veuillez rentrer le nom du personnage :");
         String nom = entree.next();
-        Personnage p = null;
+        Personnage p;
         try {
             p = (Personnage) Stockage.deserialise(nom);
             p.exportXml();

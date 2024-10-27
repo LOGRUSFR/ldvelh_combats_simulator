@@ -8,7 +8,7 @@ import java.util.jar.Manifest;
 @Getter
 public final class Version {
 
-    private static Version versionSingleton = null;
+    private static final Version versionSingleton = null;
 
     private final String programName;
 
@@ -23,7 +23,6 @@ public final class Version {
     /**
      * For unit test...
      *
-     * @param mf
      */
     public Version(Manifest mf) {
         Attributes attr = mf.getMainAttributes();
