@@ -50,10 +50,6 @@ of [ldvelh_combats_simulator-Releases](https://github.com/logrusFr/ldvelh_combat
 
 ## Links
 
-http://planete-ldvelh.com/page/liens.html
-http://en.wikipedia.org/wiki/Sagas_of_the_Demonspawn
-http://fr.wikipedia.org/wiki/Loup*_Ardent
-
 * [tool reference in planete-ldvelh site (FR)](http://planete-ldvelh.com/page/liens.html)
 
 * [tool reference in la-taverne-des-aventuriers forum (FR)](http://www.la-taverne-des-aventuriers.com/t3997-loupardent-outil-outil-pour-gerer-les-combats)
