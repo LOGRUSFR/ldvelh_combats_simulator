@@ -1,26 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <java version="11.0.25" class="java.beans.XMLDecoder">
  <object class="fr.dunan.jx.ldvelh.defis_fantastiques.Personnage">
-  <void property="chanceCourante">
-   <int>6</int>
-  </void>
-  <void property="chanceInitiale">
-   <int>8</int>
-  </void>
   <void property="enduranceCourante">
-   <int>22</int>
+   <int>18</int>
   </void>
   <void property="enduranceInitiale">
-   <int>25</int>
+   <int>18</int>
   </void>
   <void property="habileteCourante">
-   <int>14</int>
+   <int>9</int>
   </void>
   <void property="habileteInitiale">
-   <int>14</int>
+   <int>9</int>
   </void>
   <void property="nom">
-   <string>xx-logrus-port_peril</string>
+   <string>xx-lavaworm</string>
   </void>
  </object>
 </java>
